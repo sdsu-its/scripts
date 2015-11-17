@@ -11,7 +11,7 @@ cd tmp
 curl $GITHUBURL --output master.zip --silent -k
 unzip -qq master.zip
 
-chmod 0644 *
+chmod 0744 *
 cp -rf $REPONAME"-master/." $WEBPATH
 cd ..
 rm -rf tmp
