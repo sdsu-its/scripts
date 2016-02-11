@@ -4,6 +4,9 @@ We do a lot of automatization at ITS and we love CRON! The scripts in this repo
 (which are described below) do most of the heavy lifting on [Morden](http://morden.sdsu.edu)
 our small-scale production server.
 
+#### `cal_to_sheets.js`
+Google Sheets Script that fetches calendar events form a list of Google CalendarIDs
+and populates them in to the currently selected Google Sheet.
 
 #### `db-maint.sh`
 Maintains MySQL by Backing up all databases and analyzing, checking and optimizing
