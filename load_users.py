@@ -17,13 +17,13 @@ while line != "" and line is not None:
         values = line.split(",")
 
         # Get CSV Values for that line
-        userID = values[0].strip()[:9]
+        userID = values[0].strip()
         firstName = values[1].strip()
         lastName = values[2].strip()
         emailAddress = values[3].strip().lower()
 
         # Check if ID is valid
-        if not userID.isdigit():
+        if not userID.isdigit() or len(userID) > 9:
             print("ID: '%s' is not a valid ID" % userID)
             continue
 
