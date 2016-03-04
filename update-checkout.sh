@@ -1,13 +1,13 @@
 #!/bin/bash
-# Fetch the latest version of the Video Inventory Management System, build it and deploy
+# Fetch the latest version of the Equipment Checkout Manager, build it and deploy
 # the WAR to the Server.
 #
 # RUN AS TOMCAT USER - to ensures correct permissions and ownership
 ###############################################################################
 
-echo "Deploying Video-INV -- WAR file";
+echo "Deploying Checkout -- WAR file";
 
-cd /home/tomcat/video-inv;
+cd /home/tomcat/checkout;
 
 # Pull the latest code from the GitHub Repo
 git pull;
@@ -19,7 +19,7 @@ echo "Building WAR";
 ./gradlew war;
 
 # Move the built war file to the WebApps folder in TomCat
-cp build/libs/video_inv.war /usr/share/tomcat/webapps/video_inv.war;
+cp build/libs/checkout.war /usr/share/tomcat/webapps/checkout.war;
 echo "WAR File Copied to WebApps Folder";
 
 # Clean up the folder after build
