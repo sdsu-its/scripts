@@ -28,7 +28,7 @@ while line != "" and line is not None:
             continue
 
         else:
-            sqlLine = "REPLACE INTO bbusers(id,first_name,last_name,email) VALUES (%s,'%s','%s','%s');\n" % (
+            sqlLine = "REPLACE INTO users(id,first_name,last_name,email) VALUES (%s,'%s','%s','%s');\n" % (
                 userID, sanitze(firstName), sanitze(lastName), sanitze(emailAddress))
             sqlFile.write(sqlLine)
 
