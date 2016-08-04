@@ -5,8 +5,8 @@ We do a lot of automatization at ITS and we love CRON! The scripts in this repo
 our small-scale production server.
 
 #### `cal_to_sheets.js`
-Google Sheets Script that fetches calendar events form a list of Google CalendarIDs
-and populates them in to the currently selected Google Sheet.
+Google Sheets Script that fetches calendar events from a list of Google CalendarIDs
+and populates them into the currently selected Google Sheet.
 
 #### `cleanDeploy.py`
 Using Continuous Deployment on TomCat, old versions can build up and take up valuable
@@ -26,7 +26,7 @@ Convert Users CSV to SQL code for [FIT Welcome](https://github.com/sdsu-its/fit-
 IDs must be 9 digits long and be numeric, all others a thrown out. Uses `REPLACE`
 statements to keep unsubscribe data intact for previous users.
 
-#### `update_start_pages`
+#### `update_start_pages.sh`
 Update PHP start pages to the latest code from GitHub. Requires `git`.
 - [Faculty New Tab Repo](https://github.com/sdsu-its/fit-new-tab)
 - [Staff New Tab Repo](https://github.com/sdsu-its/staff-new-tab)
