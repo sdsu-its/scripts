@@ -19,15 +19,15 @@ for f in listdir(path):
             if versionNum is not None:
                 versions.append(versionNum)
         else:
-            print "No Matches Found"
+            print("No Matches Found")
 
 versions.sort()
 if not path.endswith('/'):
     path += '/'
 
-for v in versions[:numberToKeep - 1]:
-    fileName = path + fileName + '##' + v
-    print 'Removing "%s"' % fileName
-    os.remove(fileName + '.war')
-
-    shutil.rmtree(fileName)
+if len(versions) > numberToKeep - 1:
+    for v in versions[:numberToKeep - 1]:
+        fileName = path + fileName + '##' + v
+        print('Removing "%s"' % fileName)
+        os.remove(fileName + '.war')
+        shutil.rmtree(fileName)
