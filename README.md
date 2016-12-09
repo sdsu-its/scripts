@@ -10,7 +10,9 @@ and populates them into the currently selected Google Sheet.
 
 #### `cleanDeploy.py`
 Using Continuous Deployment on TomCat, old versions can build up and take up valuable
-disk space, especially if you deploy often and/or if you have large WAR files. This script removes the old war files and their unarchived folders, keeping only the newest N versions.
+disk space, especially if you deploy often and/or if you have large WAR files. This script removes the old war files and their unarchived folders, keeping only the newest N versions. You may need to run the script as SUDO to allow the files to be deleted. On debian, adding the following line to your sudoers file via `visudo` will allow the specified user to use python as a super user without a password.
+
+`USERNAME  ALL=NOPASSWD: <PATH TO SCRIPT>`
 
 Takes 3 arguments, [webapps path, context name, versions to keep]
 
