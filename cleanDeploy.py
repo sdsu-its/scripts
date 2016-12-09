@@ -30,4 +30,4 @@ if len(versions) > numberToKeep - 1:
         fileName = path + fileName + '##' + v
         print('Removing "%s"' % fileName)
         os.remove(fileName + '.war')
-        shutil.rmtree(fileName)
+#         shutil.rmtree(fileName) Only the .war File needs to be removed, the folder will be undeployed automatically 
