@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import os
 import re
-import shutil
 import sys
 from os import listdir
 
@@ -25,9 +24,9 @@ versions.sort()
 if not path.endswith('/'):
     path += '/'
 
-if len(versions) > numberToKeep - 1:
-    for v in versions[:numberToKeep - 1]:
-        fileName = path + fileName + '##' + v
-        print('Removing "%s"' % fileName)
-        os.remove(fileName + '.war')
-#         shutil.rmtree(fileName) Only the .war File needs to be removed, the folder will be undeployed automatically 
+if len(versions) > numberToKeep:
+    print(versions[:numberToKeep - 2])
+    for v in versions[:numberToKeep - 2]:
+        filePath = path + fileName + '##' + v + ".war"
+        print('Removing "%s"' % filePath)
+        os.remove(filePath)
